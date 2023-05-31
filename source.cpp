@@ -27,17 +27,12 @@ int main()
 	cout << endl;
 
 	int tmp{ v[0] };
-	for (size_t i{ len }; i < v.size(); i++)
+	for (size_t i{ len + 1 }; i < v.size(); i++)
 	{
-		if (i == 0)
-			cout << v[0];
-		else
+		if (v[i] > tmp)
 		{
-			if (v[i] > tmp)
-			{
-				cout << v[i];
-				tmp = v[i];
-			}
+			cout << v[i];
+			tmp = v[i];
 		}
 	}
 
